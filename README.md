@@ -1,3 +1,3 @@
-# spotify_mood_classification
+# Spotify Mood Classification
 
 - Classify songs by their mood.
