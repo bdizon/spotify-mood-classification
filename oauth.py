@@ -20,17 +20,5 @@ class OAuth:
         token = util.prompt_for_user_token(scope=scope, client_id=self.cid, client_secret=self.secret, redirect_uri="http://localhost:8080", cache_path=None)
         return token
 
-# sp = OAuth()
-# token = sp.get_token()
 
-# if token:
-#     print("helllo")
-#     sp = spotipy.Spotify(auth=token)
-#     print(sp.current_user()['id'])
-#     top_tracks = sp.current_user_top_tracks(limit=1, time_range="long_term")
-#     print(type(top_tracks))
-#     print(top_tracks.items())
-    
-# else:
-#     print("Can't get token")
 
