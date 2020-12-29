@@ -1,2 +1,0 @@
-api_id = "5375c020b4604e7f82291dd0df0c39c0"
-api_secret = "005c137aaf8f4b78a9be2486e2a1c210"
