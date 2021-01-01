@@ -14,7 +14,8 @@ def combine(all_csv, filename):
     '''
     if len(all_csv) > 0:
         combined_csv = pd.concat([pd.read_csv(f,header=None) for f in all_csv])
-        combined_csv.head()
+        # combined_csv.head()
+        combined_csv = combined_csv.drop_duplicates()
         combined_csv.to_csv( filename, quotechar='"', quoting=csv.QUOTE_ALL, index=False, encoding='utf-8')
         print("Combined all files")
     return 
