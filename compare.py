@@ -12,7 +12,7 @@ df = pd.read_csv('data_files' + '\\' + 'all_songs.csv', encoding="utf-8", header
 df = df[df.columns[7:20]].copy()
 df.drop(['mode', 'instrumentalness','key', 'liveness', 'time_signature'], axis=1, inplace=True)
 
-# check if mood for each is correct
+# check if mood column is free of errors
 mood_dict = {}
 for i in range(len(df.mood)):
     if df.mood[i] in mood_dict:
@@ -24,6 +24,11 @@ print(mood_dict)
 # transform mood into integer classes
 # 0 for angry, 1 for happy, 2 for sad
 df.mood = pd.factorize(df.mood)[0]
-# print(df)
 
-svm(df)
+# split dataset into features and targets
+df_feat = df[df.columns[0:7]]
+features = df_feat.to_numpy()
+target = df.mood.to_numpy()
+
+svm_acc = SVM(features, target)
+# print(svm_acc)
