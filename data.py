@@ -132,6 +132,7 @@ def get_songs(sp, index, num_playlists, mood, track_dict):
 sp = OAuth()
 token = sp.get_token()
 
+
 if token:        
         # get angry songs
         track_dict = {}

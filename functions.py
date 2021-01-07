@@ -215,4 +215,10 @@ def get_current_playlists(sp, limit_no, offset_index):
         playlist_uris.append(items[i]['uri'])
     return playlist_uris
 
+def track_history():
+    ''' 
+    Get track history for the year
+    '''
+    return
+
 
